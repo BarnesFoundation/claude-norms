@@ -6,10 +6,17 @@ A living reference of cross-project norms and patterns for Claude Code AI-assist
 ## Structure
 - `patterns/` — Reusable architectural patterns (e.g., shared memory system)
 - `norms/` — Behavioral norms and lessons learned (e.g., imperative language)
+- `expertise/` — Cross-project knowledge registry (people, implementations, libraries)
+  - `expertise/people/` — Human expertise profiles AND Claude session expertise (e.g., `claude-steve-vxp2.md`)
+  - `expertise/implementations/` — Significant technical implementations with approach, gotchas, and reuse potential
+  - `expertise/libraries/` — Reusable packages extracted from implementations
 - `README.md` — Index with quick-start instructions
 
 ## Rules for This Repo
-- Every pattern and norm MUST be listed in the README table
+- Every pattern, norm, and expertise entry MUST be listed in the README tables
 - Use imperative language in all instructional content (see `norms/imperative-language.md`)
 - Each document MUST include: the problem, the solution, the reasoning (why), and concrete examples
 - Keep documents self-contained — a Claude reading one file gets the full picture without cross-referencing
+- Expertise entries MUST cite the specific project, date, and files — no vague claims
+- Claude expertise files MUST distinguish "implemented" from "knows but hasn't implemented"
+- After completing significant work on any Barnes project, update the relevant expertise files here

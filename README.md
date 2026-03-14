@@ -22,6 +22,27 @@ This repo is a living reference that any project's Claude Code session can read 
 |------|-------------|
 | [Imperative Language](norms/imperative-language.md) | Why CLAUDE.md instructions MUST use imperative language, and how conditional phrasing causes models to skip critical steps |
 
+## Expertise Registry
+
+Cross-project knowledge base — who knows what, what's been built, and what was learned building it. See [expertise/README.md](expertise/README.md) for the full system.
+
+### People
+| Person | Key Expertise |
+|--------|--------------|
+| [Steve](expertise/people/steve.md) | LTI 1.3, MCP servers, Next.js App Router, EdTech product vision, AI-assisted dev patterns |
+| [Claude/Steve/VXP2](expertise/people/claude-steve-vxp2.md) | LTI 1.3 OIDC implementation, cross-origin cookies, Next.js HMR patterns, Dynamic Registration |
+
+### Implementations
+| Implementation | Project | Reuse Potential |
+|---------------|---------|-----------------|
+| [LTI 1.3 in Next.js App Router](expertise/implementations/lti-1.3-nextjs-app-router.md) | VXP 2.0 | High — `lti/` library is framework-agnostic |
+| [Shared Claude Memory](expertise/implementations/shared-claude-memory.md) | VXP 2.0 → claude-norms | Direct copy-paste to any project |
+
+### Libraries
+*None yet — implementations will be extracted as reuse demands emerge.*
+
+---
+
 ## Quick Start for a New Project
 
 1. Read [Shared Memory](patterns/shared-memory.md) for the full pattern
