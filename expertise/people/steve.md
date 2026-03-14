@@ -30,10 +30,10 @@ Technical lead / product visionary at Barnes Foundation. Bridges education missi
 - **What**: Designed VXP's LTI tier model for art education distribution. Conceptualized evergreen library, Deweyan engagement-based grading, session analytics architecture. Advocacy work for PA cyber charter school funding.
 - **Depth**: K-12 and higher ed LMS ecosystems, LTI as distribution channel, engagement metrics, curriculum standards alignment.
 
-### PowerPoint Conversion Tooling
+### Artwork Identification Pipeline / Museum API Integration
 - **Project**: PPT2VXP
-- **What**: Built PowerPoint to VXP conversion pipeline.
-- **Depth**: OOXML parsing, slide-to-activity mapping.
+- **What**: Built multi-strategy artwork identification pipeline: Vuforia Cloud Recognition → Google Vision → 8 museum API resolvers (Met, AIC, NGA, Rijksmuseum, Getty, LoC, WikiArt, Wikimedia Commons) → Claude AI fallback. Client-side PPTX parsing with canvas laundering. Two-phase Wikimedia downloads. Job queue with stall recovery on AWS Lambda.
+- **Depth**: Museum open-access API landscape (REST, IIIF, CSV open data, Schema.org, Wikidata). Vuforia HMAC-SHA1 auth. Wikimedia OAuth 1.0a + circuit breakers. Firestore transaction-based queue. AWS Amplify Lambda constraints. Cost optimization ($0.24 → $0.06/image).
 
 ## Working Style
 - Thinks in systems and product vision, then drills into technical specifics
