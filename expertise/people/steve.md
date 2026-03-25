@@ -40,3 +40,8 @@ Technical lead / product visionary at Barnes Foundation. Bridges education missi
 - Values documenting *why* alongside *what*
 - Prefers branch-per-concern with PR review gates
 - Rapid prototyper — "get it working, clean it up later" balanced by team's stability-first culture
+
+### Self-Hosted Image Recognition / Computer Vision
+- **Project**: Focus-Image-Resolver
+- **What**: Replacing PTC Vuforia Cloud (~$48k/year) with self-hosted ORB + RANSAC image matching on AWS. Designed two-stage matching pipeline (geometric correspondence + quality validation). Led migration of 5,465 targets (3,124 unique artworks) from Vuforia. Defined naming conventions mapping multi-image targets to single objects.
+- **Depth**: OpenCV feature detection algorithm tradeoffs (ORB vs. SIFT vs. AKAZE vs. BRISK). Vuforia VWS API internals (HMAC-SHA1 auth, server vs. client credential separation). Production image matching constraints for museum use: rejecting gallery photos, enforcing quality gates, optimizing for head-on scanning. Reference image sizing strategy (~1024x768 for better fingerprinting).

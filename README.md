@@ -29,9 +29,10 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 ### People
 | Person | Key Expertise |
 |--------|--------------|
-| [Steve](expertise/people/steve.md) | LTI 1.3, MCP servers, Next.js App Router, museum API integration, artwork identification pipelines, EdTech product vision, AI-assisted dev patterns |
+| [Steve](expertise/people/steve.md) | LTI 1.3, MCP servers, Next.js App Router, museum API integration, artwork identification pipelines, self-hosted CV/image recognition, EdTech product vision, AI-assisted dev patterns |
 | [Claude/Steve/VXP2](expertise/people/claude-steve-vxp2.md) | LTI 1.3 OIDC implementation, cross-origin cookies, Next.js HMR patterns, Dynamic Registration |
 | [Claude/Steve/PPT2VXP](expertise/people/claude-steve-ppt2vxp.md) | Museum API resolvers, Vuforia integration, Wikimedia two-phase downloads, PPTX parsing, job queue |
+| [Claude/Steve/Focus-Image-Resolver](expertise/people/claude-steve-focus-image-resolver.md) | ORB feature extraction, RANSAC geometric verification, Vuforia VWS migration, FastAPI image matching service |
 
 ### Implementations
 | Implementation | Project | Reuse Potential |
@@ -39,6 +40,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [LTI 1.3 in Next.js App Router](expertise/implementations/lti-1.3-nextjs-app-router.md) | VXP 2.0 | High — `lti/` library is framework-agnostic |
 | [Shared Claude Memory](expertise/implementations/shared-claude-memory.md) | VXP 2.0 → claude-norms | Direct copy-paste to any project |
 | [PPT2VXP Analysis Pipeline](expertise/implementations/ppt2vxp-analysis-pipeline.md) | PPT2VXP | Museum resolvers reusable; cascade pattern generalizable |
+| [Focus Image Resolver](expertise/implementations/focus-image-resolver.md) | Focus-Image-Resolver | High — ORB+RANSAC pipeline is generic; Vuforia migration tool reusable |
 
 ### Libraries
 *None yet — implementations will be extracted as reuse demands emerge.*
