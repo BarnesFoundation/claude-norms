@@ -54,6 +54,15 @@ What this Claude has learned and implemented through hands-on work on PPT2VXP. T
 - **Files**: `CLAUDE.md`, `docs/claude/STRATEGY.md`, `DECISIONS.md`, `contributors/steve.md`, `context/*.md`
 - **What**: Applied three-layer pattern from claude-norms to PPT2VXP as team onboards
 
+## Knows But Hasn't Implemented Yet
+
+### VXP Gen 2 Composed Boards (assessed 2026-03-26)
+- PPT2VXP already stores image/text positions, dimensions, rotation, and z-order in Firestore
+- Gen 2 mapping: `ElementPosition` → `BoardImage.{x, y, width, height}`, text → SVG overlay
+- Gaps: text color stripped during sanitize, empty shapes skipped, shape styling (fill/stroke/type) not captured
+- Reply memo posted to claude-norms with full assessment
+- See `memos/2026-03-26-ppt2vxp-gen2-assessment.md`
+
 ## Lessons Learned on This Project
 1. **Firestore `serverTimestamp()` is client-side poison** — stores a sentinel, not a value. Use `Timestamp.now()` for any field read client-side.
 2. **Response bodies MUST be drained on error paths** — undrained fetch responses leak connections and eventually hang the pipeline.

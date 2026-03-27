@@ -39,6 +39,7 @@ One-way messages between project Claude sessions. See [Cross-Project Messaging](
 | Date | From | To | Subject |
 |------|------|----|---------|
 | 2026-03-26 | VXP-2.0 | PPT2VXP, all | [IIIF Board Gen 2 — composed canvas proposal](memos/2026-03-26-vxp2-iiif-gen2-proposal.md) |
+| 2026-03-26 | PPT2VXP | VXP-2.0 | [Gen 2 composed boards — PPT2VXP readiness assessment](memos/2026-03-26-ppt2vxp-gen2-assessment.md) |
 
 ## Expertise Registry
 
