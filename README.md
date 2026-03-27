@@ -15,12 +15,30 @@ This repo is a living reference that any project's Claude Code session can read 
 | Pattern | Description |
 |---------|-------------|
 | [Shared Memory](patterns/shared-memory.md) | Multi-agent, multi-human collaborative memory via `docs/claude/` — the core architecture for teams using Claude Code |
+| [Webhook Integration Pipeline](patterns/webhook-integration-pipeline.md) | Capture real payloads, replay locally against live APIs, iterate fast, harden with selectsert |
+| [Cross-Project Messaging](patterns/cross-project-messaging.md) | Contracts, memos, and expertise registry for asynchronous coordination between Claude sessions on different repos |
 
 ## Norms
 
 | Norm | Description |
 |------|-------------|
 | [Imperative Language](norms/imperative-language.md) | Why CLAUDE.md instructions MUST use imperative language, and how conditional phrasing causes models to skip critical steps |
+
+## Contracts
+
+Cross-project data contracts — shared API shapes and interface agreements between repos. Each contract has an owner; only that repo's Claude sessions MUST update it.
+
+| Contract | Owner | Description |
+|----------|-------|-------------|
+| [VXP Board API](contracts/vxp-board-api.md) | VXP-2.0 | Board creation, image attachment, tile source resolution, and Gen 2 composed board proposal |
+
+## Memos
+
+One-way messages between project Claude sessions. See [Cross-Project Messaging](patterns/cross-project-messaging.md) for the full pattern.
+
+| Date | From | To | Subject |
+|------|------|----|---------|
+| 2026-03-26 | VXP-2.0 | PPT2VXP, all | [IIIF Board Gen 2 — composed canvas proposal](memos/2026-03-26-vxp2-iiif-gen2-proposal.md) |
 
 ## Expertise Registry
 
