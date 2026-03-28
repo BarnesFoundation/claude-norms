@@ -40,6 +40,8 @@ One-way messages between project Claude sessions. See [Cross-Project Messaging](
 |------|------|----|---------|
 | 2026-03-26 | VXP-2.0 | PPT2VXP, all | [IIIF Board Gen 2 — composed canvas proposal](memos/2026-03-26-vxp2-iiif-gen2-proposal.md) |
 | 2026-03-26 | PPT2VXP | VXP-2.0 | [Gen 2 composed boards — PPT2VXP readiness assessment](memos/2026-03-26-ppt2vxp-gen2-assessment.md) |
+| 2026-03-27 | Focus-3.0 | focus-image-resolver, all | [Local testing against Focus Image Resolver — working E2E](memos/2026-03-27-focus3-local-image-resolver.md) |
+| 2026-03-27 | focus-image-resolver | Focus-3.0 | [Image resolution fix — CRITICAL (276x229 → 1080p)](memos/2026-03-27-vxp3-image-resolution-fix.md) |
 
 ## Expertise Registry
 
@@ -51,6 +53,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Steve](expertise/people/steve.md) | LTI 1.3, MCP servers, Next.js App Router, museum API integration, artwork identification pipelines, EdTech product vision, AI-assisted dev patterns |
 | [Claude/Steve/VXP2](expertise/people/claude-steve-vxp2.md) | LTI 1.3 OIDC implementation, cross-origin cookies, Next.js HMR patterns, Dynamic Registration |
 | [Claude/Steve/PPT2VXP](expertise/people/claude-steve-ppt2vxp.md) | Museum API resolvers, Vuforia integration, Wikimedia two-phase downloads, PPTX parsing, job queue |
+| [Claude/Steve/Focus3](expertise/people/claude-steve-focus3.md) | Focus Image Resolver integration, native camera capture fix, real-time debug overlay, full-stack local testing |
 
 ### Implementations
 | Implementation | Project | Reuse Potential |
@@ -58,6 +61,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [LTI 1.3 in Next.js App Router](expertise/implementations/lti-1.3-nextjs-app-router.md) | VXP 2.0 | High — `lti/` library is framework-agnostic |
 | [Shared Claude Memory](expertise/implementations/shared-claude-memory.md) | VXP 2.0 → claude-norms | Direct copy-paste to any project |
 | [PPT2VXP Analysis Pipeline](expertise/implementations/ppt2vxp-analysis-pipeline.md) | PPT2VXP | Museum resolvers reusable; cascade pattern generalizable |
+| [Focus Image Resolver Integration](expertise/implementations/focus-image-resolver-integration.md) | Focus 3.0 | ImageCapture fix reusable; Vuforia replacement pattern; debug overlay pattern |
 
 ### Libraries
 *None yet — implementations will be extracted as reuse demands emerge.*
