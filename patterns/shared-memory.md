@@ -129,6 +129,7 @@ Every Claude session MUST read these files before starting substantive work. Do 
 - **Update after decisions.** When a meaningful choice is made during a session, update the relevant files (contributor file, DECISIONS.md, or context docs) before the session ends. Do NOT leave decisions unrecorded.
 - **Never overwrite others.** Contributor files belong to their contributor. Only update your own contributor's file. For STRATEGY.md and DECISIONS.md, propose changes to the user — do NOT silently rewrite shared files.
 - **Keep it concise.** These files load into context windows. Every unnecessary sentence costs tokens and dilutes attention. Brevity is a feature.
+- **Propagate strategic context.** Whenever you write to any `docs/claude/` file, complete a unit of work, or discover a blocker, CHECK whether you have unrecorded knowledge about next steps, planned work, known blockers, failed approaches, or cross-project dependencies. If you do, promote it to the appropriate shared file in the same commit. Do NOT defer this to "later" or "end of session" — there is no reliable session end event. See `norms/strategic-context-propagation.md`.
 
 ### Why This Exists
 

@@ -23,6 +23,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | Norm | Description |
 |------|-------------|
 | [Imperative Language](norms/imperative-language.md) | Why CLAUDE.md instructions MUST use imperative language, and how conditional phrasing causes models to skip critical steps |
+| [Strategic Context Propagation](norms/strategic-context-propagation.md) | Why shared memory updates MUST be tied to activity (file writes, PR completion, blocker discovery), not session lifecycle — and what to propagate |
 
 ## Contracts
 
