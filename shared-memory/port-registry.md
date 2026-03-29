@@ -9,6 +9,8 @@ All projects MUST check this registry before binding a port and update it when a
 
 | Port | Project | Service | Runtime | Notes |
 |------|---------|---------|---------|-------|
+| 3001 | Focus-3.0 | react-scripts dev server | Node 22 | React frontend, proxies /api/* to 4006 |
+| 4006 | Focus-3.0 | Express server | Node 22 | Full server (prod DB) or local-dev-server |
 | 8000 | Focus-Image-Resolver | uvicorn (FastAPI) | Python 3.13 (.venv313) | Image recognition API + /debug, /compare, /manage dashboards |
 
 ## Rules
