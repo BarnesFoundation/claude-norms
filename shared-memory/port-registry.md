@@ -10,8 +10,13 @@ All projects MUST check this registry before binding a port and update it when a
 | Port | Project | Service | Runtime | Notes |
 |------|---------|---------|---------|-------|
 | 3001 | Focus-3.0 | react-scripts dev server | Node 22 | React frontend, proxies /api/* to 4006 |
+| 3800 | PPT2VXP | Next.js dev server | Node 22 | PPTX→IIIF pipeline, `npm run dev` |
 | 4006 | Focus-3.0 | Express server | Node 22 | Full server (prod DB) or local-dev-server |
+| 4040 | PPT2VXP | Firebase Emulator UI | Java/Node | `npm run emulators` |
 | 8000 | Focus-Image-Resolver | uvicorn (FastAPI) | Python 3.13 (.venv313) | Image recognition API + /debug, /compare, /manage dashboards |
+| 8180 | PPT2VXP | Firestore emulator | Java | Part of Firebase emulators |
+| 9299 | PPT2VXP | Auth emulator | Node | Part of Firebase emulators |
+| 9399 | PPT2VXP | Storage emulator | Node | Part of Firebase emulators |
 
 ## Rules
 - Before starting a new service, check this table for conflicts
