@@ -18,6 +18,16 @@ All projects MUST check this registry before binding a port and update it when a
 | 9299 | PPT2VXP | Auth emulator | Node | Part of Firebase emulators |
 | 9399 | PPT2VXP | Storage emulator | Node | Part of Firebase emulators |
 
+## ngrok Tunnels (Hobbyist Plan — 3 endpoint max)
+
+| Domain | Local Port | Project |
+|--------|-----------|---------|
+| `francesco-forgetive-rayden.ngrok-free.dev` | 3800 | PPT2VXP |
+| `barnessteve2.ngrok.app` | 3001 | Focus-3.0 |
+| `barnessteve3.ngrok.app` | 8000 | Focus-Image-Resolver |
+
+Start each with `ngrok http --url=<domain> <port>`. NEVER start ngrok without `--url` — it will claim the free static domain and conflict with PPT2VXP.
+
 ## Rules
 - Before starting a new service, check this table for conflicts
 - Assign ports in logical ranges if possible (e.g., 8000s for Python, 3000s for Node)
