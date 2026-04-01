@@ -25,6 +25,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Imperative Language](norms/imperative-language.md) | Why CLAUDE.md instructions MUST use imperative language, and how conditional phrasing causes models to skip critical steps |
 | [Strategic Context Propagation](norms/strategic-context-propagation.md) | Why shared memory updates MUST be tied to activity (file writes, PR completion, blocker discovery), not session lifecycle — and what to propagate |
 | [Diagnostic Tools Over Guessing](norms/diagnostic-tools-over-guessing.md) | When spinning on visual/numerical accuracy, STOP adjusting and build a diagnostic tool with sliders — converges in one pass instead of hours |
+| [Team Workflow Integration](norms/team-workflow-integration.md) | How Claude Code sessions integrate with the Barnes dev team's Jira, GitHub, PR, QA, and deployment workflows — RACI matrix included |
 
 ## Contracts
 
