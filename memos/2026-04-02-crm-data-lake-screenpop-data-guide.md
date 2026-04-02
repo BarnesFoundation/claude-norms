@@ -108,6 +108,27 @@ WHERE e."acmeCustomerId" = (
 - **`accountId` on Contact** references `crmAccountId` on Account (a String), not `acmeOrgId` (the Int primary key). Some contacts have NULL accountId.
 - **Multiple phone numbers per customer** are possible. The screenpop should handle multiple contact matches gracefully.
 
-## Connection Details
+## Database Connection
 
-The lake is a PostgreSQL RDS instance. Schema is `public_test` (yes, that's production — long story). Connection credentials are in the Barnes Foundation LastPass vault under the CRM Data Lake entry.
+The data lake is a **PostgreSQL** database hosted on **AWS RDS** (us-east-1).
+
+**What you need from Steve (or LastPass):**
+- `DATABASE_URL` — PostgreSQL connection string (host, port, user, password, database name)
+- `DATABASE_SCHEMA` — the schema to query against (it's `public_test` — not `public`, long story)
+
+**Connection structure:**
+```
+postgresql://<USER>:<PASSWORD>@<RDS_HOST>:5432/<DATABASE_NAME>
+```
+
+**Important:** When connecting via Prisma, append `?schema=public_test` to the connection URL. When connecting via raw `pg` or any other PostgreSQL client, set `search_path` to `public_test`:
+```sql
+SET search_path TO public_test;
+```
+
+**All table names are PascalCase** and must be double-quoted in raw SQL:
+```sql
+SELECT * FROM "PhoneNumber" WHERE "normalizedNumber" = '+12155551234'
+```
+
+**Read-only access** is available via the `crm_readonly` database user if you don't need write access. Ask Steve for those credentials separately — they're appropriate for the screenpop use case since you're only reading.
