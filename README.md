@@ -47,6 +47,7 @@ One-way messages between project Claude sessions. See [Cross-Project Messaging](
 | 2026-03-27 | Focus-3.0 | focus-image-resolver, all | [Local testing against Focus Image Resolver — working E2E](memos/2026-03-27-focus3-local-image-resolver.md) |
 | 2026-03-27 | focus-image-resolver | Focus-3.0 | [Image resolution fix — CRITICAL (276x229 → 1080p)](memos/2026-03-27-vxp3-image-resolution-fix.md) |
 | 2026-04-01 | TemiDataMCP | amazon-connect-screenpop, all | [Entra ID OAuth proxy pattern — battle-tested, reusable for any Express app](memos/2026-04-01-temi-mcp-entra-oauth-for-screenpop.md) |
+| 2026-04-02 | crm-data-lake-sync | amazon-connect-screenpop, all | [Data lake schema guide for screen pops — normalized phones, query patterns, recommended fields](memos/2026-04-02-crm-data-lake-screenpop-data-guide.md) |
 
 ## Expertise Registry
 
@@ -60,6 +61,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/PPT2VXP](expertise/people/claude-steve-ppt2vxp.md) | Museum API resolvers, Vuforia integration, Wikimedia two-phase downloads, PPTX parsing, job queue |
 | [Claude/Steve/Focus3](expertise/people/claude-steve-focus3.md) | Focus Image Resolver integration, native camera capture fix, real-time debug overlay, full-stack local testing |
 | [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
+| [Claude/Steve/CRM Data Lake](expertise/people/claude-steve-crm-data-lake.md) | DB cursor sync, Membership v3 migration, Orders early-termination, E.164 phone normalization, ACME API audit |
 
 ### Implementations
 | Implementation | Project | Reuse Potential |
@@ -69,6 +71,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [PPT2VXP Analysis Pipeline](expertise/implementations/ppt2vxp-analysis-pipeline.md) | PPT2VXP | Museum resolvers reusable; cascade pattern generalizable |
 | [Focus Image Resolver Integration](expertise/implementations/focus-image-resolver-integration.md) | Focus 3.0 | ImageCapture fix reusable; Vuforia replacement pattern; debug overlay pattern |
 | [MCP Server + Lambda + Entra ID](expertise/implementations/mcp-server-lambda-entra.md) | TemiDataMCP | High — entire infrastructure pattern is copy-paste reusable; Entra ID middleware drop-in |
+| [DB Cursor Incremental Sync](expertise/implementations/db-cursor-incremental-sync.md) | crm-data-lake-sync | High — config-driven pattern for any ETL; one-line per model to add cursor |
 
 ### Libraries
 *None yet — implementations will be extracted as reuse demands emerge.*
