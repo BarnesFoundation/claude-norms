@@ -17,6 +17,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Shared Memory](patterns/shared-memory.md) | Multi-agent, multi-human collaborative memory via `docs/claude/` — the core architecture for teams using Claude Code |
 | [Webhook Integration Pipeline](patterns/webhook-integration-pipeline.md) | Capture real payloads, replay locally against live APIs, iterate fast, harden with selectsert |
 | [Cross-Project Messaging](patterns/cross-project-messaging.md) | Contracts, memos, and expertise registry for asynchronous coordination between Claude sessions on different repos |
+| [MCP Server on Lambda](patterns/mcp-server-lambda.md) | Deploy MCP servers as Lambda functions — bypass SSE transport, handle JSON-RPC manually, OAuth proxy pattern, schema engineering for SQL tools |
 
 ## Norms
 
@@ -45,6 +46,7 @@ One-way messages between project Claude sessions. See [Cross-Project Messaging](
 | 2026-03-26 | PPT2VXP | VXP-2.0 | [Gen 2 composed boards — PPT2VXP readiness assessment](memos/2026-03-26-ppt2vxp-gen2-assessment.md) |
 | 2026-03-27 | Focus-3.0 | focus-image-resolver, all | [Local testing against Focus Image Resolver — working E2E](memos/2026-03-27-focus3-local-image-resolver.md) |
 | 2026-03-27 | focus-image-resolver | Focus-3.0 | [Image resolution fix — CRITICAL (276x229 → 1080p)](memos/2026-03-27-vxp3-image-resolution-fix.md) |
+| 2026-04-01 | TemiDataMCP | amazon-connect-screenpop, all | [Entra ID OAuth proxy pattern — battle-tested, reusable for any Express app](memos/2026-04-01-temi-mcp-entra-oauth-for-screenpop.md) |
 
 ## Expertise Registry
 
@@ -57,6 +59,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/VXP2](expertise/people/claude-steve-vxp2.md) | LTI 1.3 OIDC implementation, cross-origin cookies, Next.js HMR patterns, Dynamic Registration |
 | [Claude/Steve/PPT2VXP](expertise/people/claude-steve-ppt2vxp.md) | Museum API resolvers, Vuforia integration, Wikimedia two-phase downloads, PPTX parsing, job queue |
 | [Claude/Steve/Focus3](expertise/people/claude-steve-focus3.md) | Focus Image Resolver integration, native camera capture fix, real-time debug overlay, full-stack local testing |
+| [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
 
 ### Implementations
 | Implementation | Project | Reuse Potential |
@@ -65,6 +68,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Shared Claude Memory](expertise/implementations/shared-claude-memory.md) | VXP 2.0 → claude-norms | Direct copy-paste to any project |
 | [PPT2VXP Analysis Pipeline](expertise/implementations/ppt2vxp-analysis-pipeline.md) | PPT2VXP | Museum resolvers reusable; cascade pattern generalizable |
 | [Focus Image Resolver Integration](expertise/implementations/focus-image-resolver-integration.md) | Focus 3.0 | ImageCapture fix reusable; Vuforia replacement pattern; debug overlay pattern |
+| [MCP Server + Lambda + Entra ID](expertise/implementations/mcp-server-lambda-entra.md) | TemiDataMCP | High — entire infrastructure pattern is copy-paste reusable; Entra ID middleware drop-in |
 
 ### Libraries
 *None yet — implementations will be extracted as reuse demands emerge.*
