@@ -27,6 +27,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Strategic Context Propagation](norms/strategic-context-propagation.md) | Why shared memory updates MUST be tied to activity (file writes, PR completion, blocker discovery), not session lifecycle — and what to propagate |
 | [Diagnostic Tools Over Guessing](norms/diagnostic-tools-over-guessing.md) | When spinning on visual/numerical accuracy, STOP adjusting and build a diagnostic tool with sliders — converges in one pass instead of hours |
 | [Team Workflow Integration](norms/team-workflow-integration.md) | How Claude Code sessions integrate with the Barnes dev team's Jira, GitHub, PR, QA, and deployment workflows — RACI matrix included |
+| [Cursor Clock Alignment](norms/cursor-clock-alignment.md) | When using DB cursors for incremental sync, the cursor MUST reflect the source system's timestamp — not your ORM's write time, which races ahead and skips records |
 
 ## Contracts
 
@@ -62,6 +63,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/Focus3](expertise/people/claude-steve-focus3.md) | Focus Image Resolver integration, native camera capture fix, real-time debug overlay, full-stack local testing |
 | [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
 | [Claude/Steve/CRM Data Lake](expertise/people/claude-steve-crm-data-lake.md) | DB cursor sync, Membership v3 migration, Orders early-termination, E.164 phone normalization, ACME API audit |
+| [Syndrix](expertise/people/syndrix.md) | Salesforce Admin, CRM data quality, interested in AI co-piloting |
 
 ### Implementations
 | Implementation | Project | Reuse Potential |

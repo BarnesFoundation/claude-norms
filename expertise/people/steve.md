@@ -35,6 +35,11 @@ Technical lead / product visionary at Barnes Foundation. Bridges education missi
 - **What**: Built multi-strategy artwork identification pipeline: Vuforia Cloud Recognition → Google Vision → 8 museum API resolvers (Met, AIC, NGA, Rijksmuseum, Getty, LoC, WikiArt, Wikimedia Commons) → Claude AI fallback. Client-side PPTX parsing with canvas laundering. Two-phase Wikimedia downloads. Job queue with stall recovery on AWS Lambda.
 - **Depth**: Museum open-access API landscape (REST, IIIF, CSV open data, Schema.org, Wikidata). Vuforia HMAC-SHA1 auth. Wikimedia OAuth 1.0a + circuit breakers. Firestore transaction-based queue. AWS Amplify Lambda constraints. Cost optimization ($0.24 → $0.06/image).
 
+### CRM Data Lake / ETL Optimization
+- **Project**: crm-data-lake-sync
+- **What**: Optimized nightly ETL sync from 26 min to 6 min (76%). Database-as-cursor pattern for incremental sync. Membership API v2→v3 migration. Orders early-termination. Phone number E.164 normalization for Amazon Connect screen pops. ACME API gap analysis.
+- **Depth**: Prisma ORM in production PostgreSQL, ACME Ticketing API ecosystem (v2/v3, reports, pagination quirks), cursor clock alignment patterns, libphonenumber integration, EC2 deployment with Node version constraints.
+
 ## Working Style
 - Thinks in systems and product vision, then drills into technical specifics
 - Values documenting *why* alongside *what*
