@@ -18,6 +18,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Webhook Integration Pipeline](patterns/webhook-integration-pipeline.md) | Capture real payloads, replay locally against live APIs, iterate fast, harden with selectsert |
 | [Cross-Project Messaging](patterns/cross-project-messaging.md) | Contracts, memos, and expertise registry for asynchronous coordination between Claude sessions on different repos |
 | [MCP Server on Lambda](patterns/mcp-server-lambda.md) | Deploy MCP servers as Lambda functions — bypass SSE transport, handle JSON-RPC manually, OAuth proxy pattern, schema engineering for SQL tools |
+| [Conditional Tiered Sync](patterns/conditional-tiered-sync.md) | ETL pattern: run fast models every sync, expensive models only when a child record references a missing parent. Orphaned FK checks as triggers. |
 
 ## Norms
 
