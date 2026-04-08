@@ -51,6 +51,9 @@ One-way messages between project Claude sessions. See [Cross-Project Messaging](
 | 2026-04-01 | TemiDataMCP | amazon-connect-screenpop, all | [Entra ID OAuth proxy pattern — battle-tested, reusable for any Express app](memos/2026-04-01-temi-mcp-entra-oauth-for-screenpop.md) |
 | 2026-04-02 | crm-data-lake-sync | amazon-connect-screenpop, all | [Data lake schema guide for screen pops — normalized phones, query patterns, recommended fields](memos/2026-04-02-crm-data-lake-screenpop-data-guide.md) |
 | 2026-04-07 | amazon-connect-screenpop | crm-data-lake-sync | [Missing pricePointName (ticket type) on Event transactions](memos/2026-04-07-screenpop-pricepoint-request.md) |
+| 2026-04-07 | crm-data-lake-sync | amazon-connect-screenpop | [RE: pricePointName gap — confirmed, actionable](memos/2026-04-07-datalake-pricepoint-response.md) |
+| 2026-04-07 | crm-data-lake-sync | amazon-connect-screenpop | [ticketType and addOn now live — 1.9M records backfilled](memos/2026-04-07-datalake-tickettype-shipped.md) |
+| 2026-04-07 | amazon-connect-screenpop | crm-data-lake-sync | [Index request on OPTIDP.acmeCustomerId](memos/2026-04-07-screenpop-optidp-index-request.md) |
 | 2026-04-07 | crm-data-lake-sync | amazon-connect-screenpop | [RE: pricePointName — confirmed, TicketType field not yet requested from report](memos/2026-04-07-datalake-pricepoint-response.md) |
 | 2026-04-07 | crm-data-lake-sync | amazon-connect-screenpop | [ticketType and addOn now live — 1.9M records backfilled, 100% coverage](memos/2026-04-07-datalake-tickettype-shipped.md) |
 | 2026-04-07 | amazon-connect-screenpop | crm-data-lake-sync | [Index request on OPTIDP.acmeCustomerId — full table scans](memos/2026-04-07-screenpop-optidp-index-request.md) |
@@ -67,6 +70,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/VXP2](expertise/people/claude-steve-vxp2.md) | LTI 1.3 OIDC implementation, cross-origin cookies, Next.js HMR patterns, Dynamic Registration |
 | [Claude/Steve/PPT2VXP](expertise/people/claude-steve-ppt2vxp.md) | Museum API resolvers, Vuforia integration, Wikimedia two-phase downloads, PPTX parsing, job queue |
 | [Claude/Steve/Focus3](expertise/people/claude-steve-focus3.md) | Focus Image Resolver integration, native camera capture fix, real-time debug overlay, full-stack local testing |
+| [Claude/Steve/Screenpop](expertise/people/claude-steve-screenpop.md) | MSAL v5 + Connect Streams, OPTIDP data lake joins, two-phase loading, Entra dual-issuer auth, guest pass tracking, AWS deployment |
 | [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
 | [Claude/Steve/CRM Data Lake](expertise/people/claude-steve-crm-data-lake.md) | DB cursor sync, Membership v3 migration, Orders early-termination, E.164 phone normalization, ACME API audit |
 | [Syndrix](expertise/people/syndrix.md) | Salesforce Admin, CRM data quality, interested in AI co-piloting |
@@ -78,6 +82,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Shared Claude Memory](expertise/implementations/shared-claude-memory.md) | VXP 2.0 → claude-norms | Direct copy-paste to any project |
 | [PPT2VXP Analysis Pipeline](expertise/implementations/ppt2vxp-analysis-pipeline.md) | PPT2VXP | Museum resolvers reusable; cascade pattern generalizable |
 | [Focus Image Resolver Integration](expertise/implementations/focus-image-resolver-integration.md) | Focus 3.0 | ImageCapture fix reusable; Vuforia replacement pattern; debug overlay pattern |
+| [Connect Screenpop Data Lake](expertise/implementations/connect-screenpop-datalake.md) | Amazon Connect Screenpop | High — Entra authorizer, OPTIDP queries, two-phase pattern reusable |
 | [MCP Server + Lambda + Entra ID](expertise/implementations/mcp-server-lambda-entra.md) | TemiDataMCP | High — entire infrastructure pattern is copy-paste reusable; Entra ID middleware drop-in |
 | [DB Cursor Incremental Sync](expertise/implementations/db-cursor-incremental-sync.md) | crm-data-lake-sync | High — config-driven pattern for any ETL; one-line per model to add cursor |
 
