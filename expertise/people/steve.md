@@ -21,6 +21,12 @@ Technical lead / product visionary at Barnes Foundation. Bridges education missi
 - **Depth**: Route handlers, middleware patterns, cookie management across auth providers, `globalThis` pattern for HMR state survival.
 
 ### AI-Assisted Development Patterns
+n### Amazon Connect Agent Desktop (2026-04)
+- Custom CCP + screenpop agent desktop deployed at ccp.barnesfoundation.org
+- CRM data lake integration for real-time caller lookup (~0.5s)
+- Entra ID SSO with security group gating
+- Cross-project coordination via claude-norms memos (data lake team shipped indexes and ticketType same-day)
+- AWS deployment: S3 + CloudFront + Lambda (VPC) + HTTP API Gateway
 - **Projects**: VXP 2.0, TemiDataMCP, claude-norms
 - **What**: Designed and implemented the shared Claude memory pattern (three-layer architecture for multi-agent collaboration). Discovered imperative language requirement for CLAUDE.md. Built cross-project norms repository.
 - **Depth**: Multi-developer Claude Code coordination, CLAUDE.md design, contributor file system, strategic memory via git.
