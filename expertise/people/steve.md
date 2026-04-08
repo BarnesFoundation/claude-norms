@@ -37,8 +37,8 @@ Technical lead / product visionary at Barnes Foundation. Bridges education missi
 
 ### CRM Data Lake / ETL Optimization
 - **Project**: crm-data-lake-sync
-- **What**: Optimized nightly ETL sync from 26 min to 6 min (76%). Database-as-cursor pattern for incremental sync. Membership API v2→v3 migration. Orders early-termination. Phone number E.164 normalization for Amazon Connect screen pops. ACME API gap analysis.
-- **Depth**: Prisma ORM in production PostgreSQL, ACME Ticketing API ecosystem (v2/v3, reports, pagination quirks), cursor clock alignment patterns, libphonenumber integration, EC2 deployment with Node version constraints.
+- **What**: Optimized ETL sync from 26 min to 55 sec (96%). Database-as-cursor with snapshot. Tiered conditional sync (Tier 1 every run, Tier 2 on orphaned FKs, Tier 3 daily safety net). Membership v2→v3 + co-processed cards in single API call. Orders early-termination. Phone E.164 normalization. ticketType/addOn/eventLocation backfills. OPTIDP indexes for screenpop. Cross-project memo coordination with amazon-connect-screenpop.
+- **Depth**: Prisma ORM in production PostgreSQL, ACME Ticketing API ecosystem (v2/v3, reports, pagination quirks, custom fields evolution), cursor clock alignment, tiered sync architecture, surgical backfill patterns (day-by-day API, month-by-month reports), Hygraph→Prisma schema gap analysis, EC2 deployment constraints.
 
 ## Working Style
 - Thinks in systems and product vision, then drills into technical specifics
