@@ -73,6 +73,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/Screenpop](expertise/people/claude-steve-screenpop.md) | MSAL v5 + Connect Streams, OPTIDP data lake joins, two-phase loading, Entra dual-issuer auth, guest pass tracking, AWS deployment |
 | [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
 | [Claude/Steve/CRM Data Lake](expertise/people/claude-steve-crm-data-lake.md) | DB cursor sync, Membership v3 migration, Orders early-termination, E.164 phone normalization, ACME API audit |
+| [Claude/Steve/Cultural Graph](expertise/people/claude-steve-cultural-graph.md) | Neo4j AuraDB + Cypher, react-force-graph-3d planar constraints, query-parametric layout strategy, dual Express/Lambda backend, Cultural Graph PoC for OACCE/Barnes strategic positioning |
 | [Syndrix](expertise/people/syndrix.md) | Salesforce Admin, CRM data quality, interested in AI co-piloting |
 
 ### Implementations

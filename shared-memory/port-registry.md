@@ -10,9 +10,11 @@ All projects MUST check this registry before binding a port and update it when a
 | Port | Project | Service | Runtime | Notes |
 |------|---------|---------|---------|-------|
 | 3001 | Focus-3.0 | react-scripts dev server | Node 22 | React frontend, proxies /api/* to 4006 |
+| 3737 | CMPVisualDashboard | Vite dev server | Node 22 | React + react-force-graph-3d frontend (Cultural Graph PoC), reads `VITE_API_BASE` (defaults to http://localhost:4747) |
 | 3800 | PPT2VXP | Next.js dev server | Node 22 | PPTX→IIIF pipeline, `npm run dev` |
 | 4006 | Focus-3.0 | Express server | Node 22 | Full server (prod DB) or local-dev-server |
 | 4040 | PPT2VXP | Firebase Emulator UI | Java/Node | `npm run emulators` |
+| 4747 | CMPVisualDashboard | Express server | Node 22 | Cultural Graph backend; same handler runs as AWS SAM Lambda for deploy. Talks to Neo4j AuraDB via bolt+s. |
 | 8000 | Focus-Image-Resolver | uvicorn (FastAPI) | Python 3.13 (.venv313) | Image recognition API + /debug, /compare, /manage dashboards |
 | 8180 | PPT2VXP | Firestore emulator | Java | Part of Firebase emulators |
 | 9299 | PPT2VXP | Auth emulator | Node | Part of Firebase emulators |
