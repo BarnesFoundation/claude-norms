@@ -19,6 +19,8 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Cross-Project Messaging](patterns/cross-project-messaging.md) | Contracts, memos, and expertise registry for asynchronous coordination between Claude sessions on different repos |
 | [MCP Server on Lambda](patterns/mcp-server-lambda.md) | Deploy MCP servers as Lambda functions — bypass SSE transport, handle JSON-RPC manually, OAuth proxy pattern, schema engineering for SQL tools |
 | [Conditional Tiered Sync](patterns/conditional-tiered-sync.md) | ETL pattern: run fast models every sync, expensive models only when a child record references a missing parent. Orphaned FK checks as triggers. |
+| [Chat as Management UX](patterns/chat-as-management-ux.md) | When a notification bot needs per-user state, use the bot's own 1:1 chat as the management interface. Strict-syntax verbs, JWT-validated endpoint, no separate web portal. |
+| [Cookie Extraction and Rotation](patterns/cookie-extraction-and-rotation.md) | Two-tier cookie model for reverse-engineered portals: short-lived session auto-refreshed via silent OIDC re-auth in plain Node fetch, long-lived device-trust cookie rotated by a one-minute annual ritual. No Playwright, no SMS automation. |
 
 ## Norms
 
@@ -29,6 +31,7 @@ This repo is a living reference that any project's Claude Code session can read 
 | [Diagnostic Tools Over Guessing](norms/diagnostic-tools-over-guessing.md) | When spinning on visual/numerical accuracy, STOP adjusting and build a diagnostic tool with sliders — converges in one pass instead of hours |
 | [Team Workflow Integration](norms/team-workflow-integration.md) | How Claude Code sessions integrate with the Barnes dev team's Jira, GitHub, PR, QA, and deployment workflows — RACI matrix included |
 | [Cursor Clock Alignment](norms/cursor-clock-alignment.md) | When using DB cursors for incremental sync, the cursor MUST reflect the source system's timestamp — not your ORM's write time, which races ahead and skips records |
+| [Natural Consequences Over Paternalistic Validation](norms/natural-consequences-over-paternalistic-validation.md) | When the system's own feedback loop punishes bad input, let the consequences speak. Validate STRUCTURE (parser-level), not SEMANTICS ("are you sure?") |
 
 ## Contracts
 
@@ -73,6 +76,7 @@ Cross-project knowledge base — who knows what, what's been built, and what was
 | [Claude/Steve/Screenpop](expertise/people/claude-steve-screenpop.md) | MSAL v5 + Connect Streams, OPTIDP data lake joins, two-phase loading, Entra dual-issuer auth, guest pass tracking, AWS deployment |
 | [Claude/Steve/Temi](expertise/people/claude-steve-temi.md) | MCP server on Lambda, Entra ID OAuth proxy, schema engineering for SQL tools, manual JSON-RPC handler |
 | [Claude/Steve/CRM Data Lake](expertise/people/claude-steve-crm-data-lake.md) | DB cursor sync, Membership v3 migration, Orders early-termination, E.164 phone normalization, ACME API audit |
+| [Claude/Steve/Quarantine Canary](expertise/people/claude-steve-quarantine-canary.md) | AppRiver portal reverse engineering, silent OIDC re-auth in plain Node fetch, Bot Framework proactive without SDK, chat-as-management UX, DynamoDB dedup |
 | [Syndrix](expertise/people/syndrix.md) | Salesforce Admin, CRM data quality, interested in AI co-piloting |
 
 ### Implementations
