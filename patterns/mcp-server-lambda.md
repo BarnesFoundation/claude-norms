@@ -98,13 +98,38 @@ export const handler = (event: unknown, context: { callbackWaitsForEmptyEventLoo
 
 ### OAuth Proxy (for Entra ID or any IdP)
 
-Three routes that translate between the client's OAuth flow and the IdP:
+Routes that translate between the client's OAuth flow and the IdP:
 
-1. `GET /.well-known/oauth-authorization-server` — Returns metadata pointing to your endpoints
-2. `GET /authorize` — Redirects to IdP with corrected scopes
-3. `POST /token` — Proxies token exchange to IdP, returns response
+1. `GET /.well-known/oauth-authorization-server` — AS Metadata (RFC 8414)
+2. `GET /.well-known/oauth-protected-resource` — **PR Metadata (RFC 9728) — REQUIRED by the 2025-06-18 MCP spec.** Claude.ai hits this when it receives a 401 from the MCP endpoint to discover the auth server. Omitting it produces "Couldn't reach the MCP server" during connector registration. Also serve it at `/.well-known/oauth-protected-resource/mcp` for path-suffixed clients.
+3. `GET /authorize` — Redirects to IdP with corrected scopes
+4. `POST /token` — Proxies token exchange to IdP, returns response
+5. Auth middleware: **on 401 MUST set `WWW-Authenticate: Bearer resource_metadata="<PR metadata URL>"`** — this is how clients discover step 2.
 
-See memo `2026-04-01-temi-mcp-entra-oauth-for-screenpop.md` for full code examples.
+PR metadata body:
+```json
+{
+  "resource": "https://<server>/mcp",
+  "authorization_servers": ["https://<server>"],
+  "scopes_supported": ["<client-id>/.default", "openid", "profile", "email"],
+  "bearer_methods_supported": ["header"]
+}
+```
+
+See memo `2026-04-01-temi-mcp-entra-oauth-for-screenpop.md` for full code examples and `crm-data-lake-mcp/server/src/index.ts` for an RFC 9728-compliant implementation.
+
+### Catch-all 404 (do NOT rely on Express defaults)
+
+When no route matches, Express's default `finalhandler` crashes inside the serverless-express ESM bundle with `TypeError: a.on is not a function`. ALWAYS register an explicit catch-all that returns JSON:
+
+```typescript
+app.use((req, res) => {
+  console.log(`404 ${req.method} ${req.path}`);
+  res.status(404).json({ error: 'not_found', path: req.path });
+});
+```
+
+Without this, any 404 (including the protected-resource probe before you implement step 2 above) returns a 500 to Claude.ai, presenting as "Couldn't reach the MCP server."
 
 ## Why This Works
 
@@ -125,6 +150,8 @@ The MCP spec for streamable HTTP allows two response modes:
 | Entra ID dual issuers | v1 and v2 tokens have different issuer formats | Accept both in JWT validation |
 | dotenv `#` parsing | Passwords truncated at `#` character | Quote in `.env`: `DB_PASSWORD="p#ss"` |
 | Tool descriptions | Model ignores guidance, uses trained instincts | Use imperative language: "MUST", "NEVER" |
+| Connector registration fails ("Couldn't reach the MCP server") | Missing `/.well-known/oauth-protected-resource` (RFC 9728 — required by 2025-06-18 MCP spec). | Add the PR metadata endpoint (and the `/mcp`-suffixed variant) and set `WWW-Authenticate: Bearer resource_metadata="..."` on 401. |
+| Random 500s on unknown paths | Express's default 404 handler crashes in serverless-express ESM (`a.on is not a function`). | Register an explicit catch-all `app.use((req, res) => res.status(404).json(...))`. |
 
 ## Schema Engineering (for SQL-generating tools)
 
